@@ -26,7 +26,7 @@ trait EnumTraits
         return $this->value;
     }
 
-    public static function equal($value, UnitEnum|string $enum): bool
+    public static function equal($value, UnitEnum|string|null $enum): bool
     {
         if (is_string($value)) {
             return $value === $enum->value;
@@ -35,7 +35,7 @@ trait EnumTraits
         return $value === $enum;
     }
 
-    public static function notEqual($value, UnitEnum|string $enum): bool
+    public static function notEqual($value, UnitEnum|string|null $enum): bool
     {
         return !self::equal($value, $enum);
     }
@@ -45,7 +45,7 @@ trait EnumTraits
         return array_search($value, self::values());
     }
 
-    public static function isValid(UnitEnum|string $value): bool
+    public static function isValid(UnitEnum|string|null $value): bool
     {
         return in_array($value, self::values()) || in_array($value, self::cases());
     }
