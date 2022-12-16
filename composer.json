@@ -1,0 +1,20 @@
+{
+    "name": "sagar290/php-traits",
+    "description": "Useful php traits for daily usage",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Sagar290\\PhpTraits\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sagar",
+            "email": "sagar.dash290@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1"
+    }
+}
